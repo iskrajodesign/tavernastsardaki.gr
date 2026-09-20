@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Taverna Tsardaki | Seafood Restaurant in Nea Skioni, Halkidiki</title>
+<meta name="description" content="Taverna Tsardaki in Nea Skioni, Halkidiki. Fresh seafood, grilled dishes, homemade food and Greek hospitality by the harbour.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://iskrajodesign.github.io/tsardaki.gr/">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Taverna Tsardaki | Seafood Restaurant in Nea Skioni, Halkidiki">
+<meta property="og:description" content="Taverna Tsardaki in Nea Skioni, Halkidiki. Fresh seafood, grilled dishes, homemade food and Greek hospitality by the harbour.">
+<meta property="og:url" content="https://iskrajodesign.github.io/tsardaki.gr/">
+<meta property="og:image" content="https://iskrajodesign.github.io/tsardaki.gr/assets/hero-test1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Taverna Tsardaki | Seafood Restaurant in Nea Skioni, Halkidiki">
+<meta name="twitter:description" content="Taverna Tsardaki in Nea Skioni, Halkidiki. Fresh seafood, grilled dishes, homemade food and Greek hospitality by the harbour.">
+<meta name="twitter:image" content="https://iskrajodesign.github.io/tsardaki.gr/assets/hero-test1.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Taverna Tsardaki",
+  "description": "Fresh seafood, grilled dishes, homemade food and Greek hospitality by the harbour of Nea Skioni, Halkidiki.",
+  "url": "https://iskrajodesign.github.io/tsardaki.gr/",
+  "telephone": "+306938186444",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nea Skioni",
+    "addressRegion": "Halkidiki",
+    "postalCode": "63085",
+    "addressCountry": "GR"
+  },
+  "sameAs": [
+    "https://www.facebook.com/TsardakiTaverna/",
+    "https://www.google.com/maps/search/?api=1&query=Taverna+Tsardaki+Nea+Skioni+63085+Greece"
+  ],
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Taverna+Tsardaki+Nea+Skioni+63085+Greece",
+  "servesCuisine": ["Greek", "Seafood", "Mediterranean"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "267"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700;800;900&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+body { margin: 0; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+a { color: inherit; }
+@keyframes tsardaki-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes tsardaki-reveal { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes tsardaki-sea-drift { 0%, 100% { transform: scale(1.06) translate(0, 0); } 50% { transform: scale(1.1) translate(-1.5%, -1%); } }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  [data-parallax] { transform: none !important; }
+}
+@media (max-width: 768px) {
+  .ts-hero-actions { width: 100% !important; }
+  .ts-btn-primary { display: block !important; width: 100% !important; text-align: center !important; box-sizing: border-box !important; }
+  .ts-cta-directions { display: block !important; width: 100% !important; text-align: center !important; box-sizing: border-box !important; }
+  .ts-gap-lg { gap: 32px !important; }
+  .ts-contact-actions { gap: 20px !important; }
+  .ts-story-text { order: -1 !important; }
+  .ts-hero-inner { align-items: flex-start !important; padding-top: 165px !important; }
+  .ts-hero-photo { filter: none !important; }
+  .ts-section-xl { padding: clamp(64px,10vw,96px) clamp(20px,6vw,32px) !important; }
+  .ts-sea-grid { grid-template-columns: 1fr !important; grid-auto-rows: auto !important; gap: 16px !important; }
+  .ts-sea-item { grid-column: 1 / -1 !important; grid-row: auto !important; }
+  .ts-sea-img { object-fit: contain !important; }
+}
+</style>
+</helmet>
+
+<div style="background:#F4F0E8;color:#1D1D1A;font-family:'Work Sans',sans-serif;overflow-x:hidden;width:100%;">
+
+<div style="{{ navBarStyle }}">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:{{ navInnerPadding }};overflow:visible;">
+    <a href="#home" style="display:flex;align-items:center;text-decoration:none;overflow:visible;">
+      <img src="assets/logo-tsardaki.png" alt="Taverna Tsardaki logo" style="height:88px;width:auto;object-fit:contain;display:block;margin:-22px 0;">
+    </a>
+
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;align-items:center;gap:36px;flex-wrap:nowrap;">
+        <a href="#home" style="color:{{ navTextColor }};text-decoration:none;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;transition:opacity 0.2s ease;" style-hover="opacity:0.6;">Home</a>
+        <a href="#story" style="color:{{ navTextColor }};text-decoration:none;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;transition:opacity 0.2s ease;" style-hover="opacity:0.6;">Our Story</a>
+        <a href="#menu" style="color:{{ navTextColor }};text-decoration:none;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;transition:opacity 0.2s ease;" style-hover="opacity:0.6;">Menu</a>
+        <a href="#experience" style="color:{{ navTextColor }};text-decoration:none;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;transition:opacity 0.2s ease;" style-hover="opacity:0.6;">Experience</a>
+        <a href="#visit" style="background:transparent;color:#A58A5B;border:1px solid #A58A5B;padding:10px 21px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;transition:background-color 0.25s ease, color 0.25s ease;" style-hover="background:#A58A5B;color:#1D1D1A;">Contact Us</a>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:none;border:none;cursor:pointer;padding:0;position:relative;">
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute;top:50%;left:50%;width:22px;height:1.5px;background:{{ navTextColor }};transform:translate(-50%,-50%) rotate(45deg);"></span>
+          <span style="position:absolute;top:50%;left:50%;width:22px;height:1.5px;background:{{ navTextColor }};transform:translate(-50%,-50%) rotate(-45deg);"></span>
+        </sc-if>
+        <sc-if value="{{ menuClosed }}" hint-placeholder-val="{{ true }}">
+          <span style="display:flex;flex-direction:column;gap:5px;">
+            <span style="width:22px;height:1.5px;background:{{ navTextColor }};display:block;"></span>
+            <span style="width:22px;height:1.5px;background:{{ navTextColor }};display:block;"></span>
+            <span style="width:22px;height:1.5px;background:{{ navTextColor }};display:block;"></span>
+          </span>
+        </sc-if>
+      </button>
+    </sc-if>
+  </div>
+</div>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;background:#F4F0E8;z-index:99;display:flex;flex-direction:column;align-items:center;padding:100px 32px 40px;gap:0;">
+    <button onClick="{{ closeMenu }}" aria-label="Close menu" style="position:absolute;top:22px;right:24px;background:none;border:none;font-size:28px;color:#1D1D1A;cursor:pointer;line-height:1;">×</button>
+    <a href="#home" onClick="{{ closeMenu }}" style="text-decoration:none;color:#1D1D1A;font-size:20px;letter-spacing:0.05em;text-transform:uppercase;padding:16px 0;border-bottom:1px solid rgba(29,29,26,0.1);text-align:center;width:100%;">Home</a>
+    <a href="#story" onClick="{{ closeMenu }}" style="text-decoration:none;color:#1D1D1A;font-size:20px;letter-spacing:0.05em;text-transform:uppercase;padding:16px 0;border-bottom:1px solid rgba(29,29,26,0.1);text-align:center;width:100%;">Our Story</a>
+    <a href="#menu" onClick="{{ closeMenu }}" style="text-decoration:none;color:#1D1D1A;font-size:20px;letter-spacing:0.05em;text-transform:uppercase;padding:16px 0;border-bottom:1px solid rgba(29,29,26,0.1);text-align:center;width:100%;">Menu</a>
+    <a href="#experience" onClick="{{ closeMenu }}" style="text-decoration:none;color:#1D1D1A;font-size:20px;letter-spacing:0.05em;text-transform:uppercase;padding:16px 0;border-bottom:1px solid rgba(29,29,26,0.1);text-align:center;width:100%;">Experience</a>
+    <a href="#visit" onClick="{{ closeMenu }}" style="margin-top:auto;background:transparent;color:#A58A5B;border:1px solid #A58A5B;text-align:center;padding:17px;border-radius:6px;width:100%;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;box-sizing:border-box;transition:background-color 0.25s ease, color 0.25s ease;" style-hover="background:#A58A5B;color:#1D1D1A;">Contact Us</a>
+  </div>
+</sc-if>
+
+<section id="home" style="position:relative;height:100vh;min-height:520px;display:flex;flex-direction:column;overflow:hidden;">
+  <div style="position:relative;flex:1;min-height:0;background-color:#1D1D1A;">
+    <div class="ts-hero-photo" style="position:absolute;inset:0;background-image:url('assets/hero-test1.jpg');background-size:100% auto;background-repeat:no-repeat;background-position:center bottom;filter:blur(1.2px);transform:scale(1.02);pointer-events:none;"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 640px 460px at 50% 50%, rgba(29,29,26,0.52) 0%, rgba(29,29,26,0.24) 45%, rgba(29,29,26,0) 75%);pointer-events:none;"></div>
+    <div class="ts-hero-inner" style="position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:center;padding:clamp(56px,8vw,80px) clamp(24px,5vw,48px) clamp(12px,2vw,24px);overflow:hidden;">
+      <div style="max-width:{{ heroTextMaxWidth }};text-align:center;">
+        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+          <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;color:#F4F0E8;text-transform:uppercase;margin-bottom:14px;">Seafood Restaurant · Nea Skioni · Halkidiki</div>
+        </sc-if>
+        <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+          <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;color:#F4F0E8;text-transform:uppercase;margin-bottom:14px;">Seafood Restaurant<br>Nea Skioni · Halkidiki</div>
+        </sc-if>
+        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+          <h1 style="font-family:'Spectral',serif;font-weight:900;font-size:clamp(36px,4.4vw,74px);line-height:1.15;letter-spacing:-0.005em;color:#F4F0E8;margin:0 0 14px;white-space:nowrap;">The Sea. The Food. The Table.</h1>
+        </sc-if>
+        <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+          <h1 style="font-family:'Spectral',serif;font-weight:900;font-size:clamp(28px,6vw,86px);line-height:1.05;color:#F4F0E8;margin:0 0 14px;">
+            <span style="display:block;">The Sea.</span>
+            <span style="display:block;">The Food.</span>
+            <span style="display:block;">The Table.</span>
+          </h1>
+        </sc-if>
+        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+          <p style="font-family:'Work Sans',sans-serif;font-size:16px;font-weight:600;line-height:1.4;color:#F4F0E8;max-width:440px;margin:0 auto 32px;">Fresh seafood, honest cooking <br>and Greek hospitality by the harbour</p>
+        </sc-if>
+        <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+          <p style="font-family:'Work Sans',sans-serif;font-size:15px;font-weight:600;line-height:1.45;color:#F4F0E8;max-width:300px;margin:0 auto 28px;">Fresh seafood, honest cooking <br>and Greek hospitality by the harbour</p>
+        </sc-if>
+        <div class="ts-hero-actions" style="display:flex;align-items:center;justify-content:center;">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" class="ts-btn-primary" style="background:#F4F0E8;color:#1D1D1A;padding:13px 32px;border-radius:6px;text-decoration:none;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;" style-hover="background:#A58A5B;color:#F4F0E8;transform:translateY(-2px);">Visit Us</a>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:#F4F0E8;text-decoration:underline;text-underline-offset:4px;font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:gap 0.25s ease;max-width:100%;text-align:center;flex-wrap:wrap;justify-content:center;" style-hover="gap:13px;">
+          Google · 4.6 <span style="color:#A58A5B;font-weight:800;">★</span> · 270 reviews
+        </a>
+      </div>
+    </div>
+  </div>
+  <div style="background:#1D1D1A;border-top:1px solid rgba(244,240,232,0.12);padding:15px 0;overflow:hidden;white-space:nowrap;">
+    <div style="display:inline-flex;align-items:center;gap:26px;animation:tsardaki-marquee 34s linear infinite;">
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Fresh Seafood</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Greek Taverna</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Nea Skioni</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Halkidiki</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Mediterranean Flavours</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">By the Harbour</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Fresh Seafood</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Greek Taverna</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Nea Skioni</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Halkidiki</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">Mediterranean Flavours</span><span style="color:#A58A5B;font-weight:700;">·</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(244,240,232,0.55);">By the Harbour</span><span style="color:#A58A5B;font-weight:700;">·</span>
+    </div>
+  </div>
+</section>
+
+<section id="story" style="padding:clamp(72px,12vw,96px) clamp(24px,6vw,48px);">
+  <div class="ts-gap-lg" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:64px;align-items:center;animation:tsardaki-reveal 0.7s ease-out both;">
+    <div data-parallax="true" style="max-width:250px;margin:0 auto;width:100%;aspect-ratio:647/1332;overflow:hidden;border:1px solid rgba(29,29,26,0.12);">
+      <img src="assets/kostas.jpg" alt="Kostas Tseledidis" style="width:100%;height:100%;object-fit:contain;display:block;transition:transform 0.7s ease;" style-hover="transform:scale(1.05);">
+    </div>
+    <div class="ts-story-text" data-reveal="text" style="transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">01</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">Our Story</span>
+      </div>
+      <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 24px;color:#1D1D1A;">A Place to Come Back To</h2>
+      <p style="font-size:16px;line-height:1.7;color:rgba(29,29,26,0.72);max-width:440px;margin:0 0 20px;">Taverna Tsardaki began in 2019, with a love for Greek hospitality and the pleasure of bringing people together around the table. Today, Chef and owner Kostas Tselekidis keeps that spirit alive in his own way.</p>
+      <p style="font-size:16px;line-height:1.7;color:rgba(29,29,26,0.72);max-width:440px;margin:0;">Over the years, Tsardaki has grown with Nea Skioni while staying true to what matters most: a welcoming atmosphere, generous hospitality and food made to be shared.</p>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="padding:clamp(72px,12vw,96px) clamp(24px,6vw,48px);">
+  <div style="max-width:1100px;margin:0 auto;animation:tsardaki-reveal 0.7s ease-out both;">
+    <div style="max-width:600px;margin:0 auto 56px;text-align:center;">
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px;">
+        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">02</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">Our Food</span>
+      </div>
+      <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 20px;color:#1D1D1A;">Simple ingredients.<br></h2>
+      <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0;">Flavours of the sea and the grill, made with care.</p>
+    </div>
+
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;align-items:stretch;">
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;border:1px solid rgba(29,29,26,0.12);">
+          <div data-reveal="img" style="width:100%;aspect-ratio:1301/816;overflow:hidden;border-bottom:1px solid rgba(29,29,26,0.12);transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
+            <img src="assets/food-the-sea.jpg" alt="Grilled octopus salad" style="width:100%;height:100%;object-fit:fill;display:block;">
+          </div>
+          <div data-reveal="text" style="padding:28px 28px 40px;display:flex;flex-direction:column;align-items:center;flex:1;transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
+            <span style="display:inline-flex;width:44px;height:44px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;margin-bottom:20px;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 3-8 8-8 13h16c0-5-4-10-8-13z"></path><path d="M12 6v10M8 9.5v6.5M16 9.5v6.5"></path></svg>
+            </span>
+            <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A58A5B;margin-bottom:10px;">The Sea</div>
+            <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:22px;line-height:1.25;margin:0 0 16px;color:#1D1D1A;">Fresh From the Aegean</h3>
+            <span style="width:28px;height:1px;background:rgba(29,29,26,0.2);display:block;margin-bottom:16px;flex-shrink:0;"></span>
+            <p style="font-size:14px;line-height:1.65;color:rgba(29,29,26,0.68);margin:0 0 28px;max-width:260px;flex:1;">Fresh seafood and the flavours of the Aegean, <br>prepared to let the ingredients speak for themselves.</p>
+            <a href="seafood-menu.html" style="color:#A58A5B;border:1px solid #A58A5B;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;flex-shrink:0;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;transform:translateY(-2px);">Explore Seafood →</a>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;border:1px solid rgba(29,29,26,0.12);">
+          <div data-reveal="img" style="width:100%;aspect-ratio:1301/816;overflow:hidden;border-bottom:1px solid rgba(29,29,26,0.12);transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
+            <img src="assets/food-grill.jpg" alt="Grilled whole fish with salad" style="width:100%;height:100%;object-fit:fill;display:block;">
+          </div>
+          <div data-reveal="text" style="padding:28px 28px 40px;display:flex;flex-direction:column;align-items:center;flex:1;transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
+            <span style="display:inline-flex;width:44px;height:44px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;margin-bottom:20px;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-2 4-2 7a3 3 0 003 3c2 0 3-1.5 3-3 2 2 3 5 3 7a7 7 0 11-14 0c0-4 2-6 3-9 1 1 1 2 2 2 0-3-1-5 2-7z"></path></svg>
+            </span>
+            <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A58A5B;margin-bottom:10px;">From the Grill</div>
+            <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:22px;line-height:1.25;margin:0 0 16px;color:#1D1D1A;">Simply Prepared</h3>
+            <span style="width:28px;height:1px;background:rgba(29,29,26,0.2);display:block;margin-bottom:16px;flex-shrink:0;"></span>
+            <p style="font-size:14px;line-height:1.65;color:rgba(29,29,26,0.68);margin:0 0 28px;max-width:260px;flex:1;">From the fire to the table, with carefully selected meat and the unmistakable character of proper grilling.</p>
+            <a href="grill-menu.html" style="color:#A58A5B;border:1px solid #A58A5B;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;flex-shrink:0;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;transform:translateY(-2px);">Explore the Grill →</a>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;border:1px solid rgba(29,29,26,0.12);">
+          <div data-reveal="img" style="width:100%;aspect-ratio:1264/793;overflow:hidden;border-bottom:1px solid rgba(29,29,26,0.12);transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
+            <img src="assets/food-made-here.jpg" alt="Tzatziki" style="width:100%;height:100%;object-fit:fill;display:block;">
+          </div>
+          <div data-reveal="text" style="padding:28px 28px 40px;display:flex;flex-direction:column;align-items:center;flex:1;transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
+            <span style="display:inline-flex;width:44px;height:44px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;margin-bottom:20px;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8 1 14-5 14-14C10 5 4 11 5 19z"></path><path d="M5 19c3-5 6-8 10-11"></path></svg>
+            </span>
+            <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A58A5B;margin-bottom:10px;">Made Here</div>
+            <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:22px;line-height:1.25;margin:0 0 16px;color:#1D1D1A;">Made With Care</h3>
+            <span style="width:28px;height:1px;background:rgba(29,29,26,0.2);display:block;margin-bottom:16px;flex-shrink:0;"></span>
+            <p style="font-size:14px;line-height:1.65;color:rgba(29,29,26,0.68);margin:0 0 28px;max-width:260px;flex:1;">Homemade dishes prepared in our kitchen, bringing familiar Greek flavours and a sense of something made especially for the table.</p>
+            <a href="made-here-menu.html" style="color:#A58A5B;border:1px solid #A58A5B;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;flex-shrink:0;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;transform:translateY(-2px);">Explore the Table →</a>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:18px;">
+        <div style="display:flex;flex-direction:column;border:1px solid rgba(29,29,26,0.12);padding:14px;">
+          <div style="display:flex;align-items:flex-start;gap:18px;">
+            <div data-reveal="img" style="width:110px;aspect-ratio:1301/816;flex-shrink:0;overflow:hidden;border:1px solid rgba(29,29,26,0.12);transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1);">
+              <img src="assets/food-the-sea.jpg" alt="Grilled octopus salad" style="width:100%;height:100%;object-fit:fill;display:block;">
+            </div>
+            <div data-reveal="text" style="flex:1;min-width:0;transition:opacity 0.7s cubic-bezier(.16,1,.3,1) 0.08s, transform 0.7s cubic-bezier(.16,1,.3,1) 0.08s;">
+              <div style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#A58A5B;margin-bottom:6px;">The Sea</div>
+              <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:18px;line-height:1.25;margin:0 0 10px;color:#1D1D1A;">Fresh From the Aegean</h3>
+              <span style="width:20px;height:1px;background:rgba(29,29,26,0.2);display:block;"></span>
+            </div>
+          </div>
+          <a href="seafood-menu.html" style="display:block;text-align:center;margin-top:16px;color:#A58A5B;border:1px solid #A58A5B;padding:12px 16px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;">Explore Seafood →</a>
+        </div>
+        <div style="display:flex;flex-direction:column;border:1px solid rgba(29,29,26,0.12);padding:14px;">
+          <div style="display:flex;align-items:flex-start;gap:18px;">
+            <div data-reveal="img" style="width:110px;aspect-ratio:1301/816;flex-shrink:0;overflow:hidden;border:1px solid rgba(29,29,26,0.12);transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1);">
+              <img src="assets/food-grill.jpg" alt="Grilled whole fish with salad" style="width:100%;height:100%;object-fit:fill;display:block;">
+            </div>
+            <div data-reveal="text" style="flex:1;min-width:0;transition:opacity 0.7s cubic-bezier(.16,1,.3,1) 0.08s, transform 0.7s cubic-bezier(.16,1,.3,1) 0.08s;">
+              <div style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#A58A5B;margin-bottom:6px;">From the Grill</div>
+              <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:18px;line-height:1.25;margin:0 0 10px;color:#1D1D1A;">Simply Prepared</h3>
+              <span style="width:20px;height:1px;background:rgba(29,29,26,0.2);display:block;"></span>
+            </div>
+          </div>
+          <a href="grill-menu.html" style="display:block;text-align:center;margin-top:16px;color:#A58A5B;border:1px solid #A58A5B;padding:12px 16px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;">Explore the Grill →</a>
+        </div>
+        <div style="display:flex;flex-direction:column;border:1px solid rgba(29,29,26,0.12);padding:14px;">
+          <div style="display:flex;align-items:flex-start;gap:18px;">
+            <div data-reveal="img" style="width:110px;aspect-ratio:1264/793;flex-shrink:0;overflow:hidden;border:1px solid rgba(29,29,26,0.12);transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1);">
+              <img src="assets/food-made-here.jpg" alt="Tzatziki" style="width:100%;height:100%;object-fit:fill;display:block;">
+            </div>
+            <div data-reveal="text" style="flex:1;min-width:0;transition:opacity 0.7s cubic-bezier(.16,1,.3,1) 0.08s, transform 0.7s cubic-bezier(.16,1,.3,1) 0.08s;">
+              <div style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#A58A5B;margin-bottom:6px;">Made Here</div>
+              <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:18px;line-height:1.25;margin:0 0 10px;color:#1D1D1A;">Made With Care</h3>
+              <span style="width:20px;height:1px;background:rgba(29,29,26,0.2);display:block;"></span>
+            </div>
+          </div>
+          <a href="made-here-menu.html" style="display:block;text-align:center;margin-top:16px;color:#A58A5B;border:1px solid #A58A5B;padding:12px 16px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;">Explore the Table →</a>
+        </div>
+      </div>
+    </sc-if>
+
+  </div>
+</section>
+
+<section id="experience" style="padding:clamp(72px,12vw,96px) clamp(24px,6vw,48px);">
+  <div class="ts-gap-lg" style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px;align-items:center;animation:tsardaki-reveal 0.7s ease-out both;">
+    <div data-reveal="text" style="flex:1 1 300px;transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">03</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">The Table</span>
+      </div>
+      <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 20px;color:#1D1D1A;">The Way We <br>Welcome You</h2>
+      <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);max-width:420px;margin:0 0 18px;">This year, Tsardaki begins a new chapter in a new location, right on the town promenade, next to the harbour. The setting has changed, but what matters around the table has not: good food, familiar flavours and the warmth of a traditional Greek taverna.</p>
+      <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);max-width:420px;margin:0;">Come for a long lunch, an easy dinner or simply a table by the harbour. There is room for relaxed afternoons, shared plates and conversations that last a little longer than planned.</p>
+    </div>
+    <div data-reveal="img" style="flex:1.4 1 380px;aspect-ratio:944/1118;overflow:hidden;border:1px solid rgba(29,29,26,0.12);transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
+      <img src="assets/table.jpg" alt="Taverna Tsardaki terrace" style="width:100%;height:100%;object-fit:contain;display:block;transition:transform 0.7s ease;" style-hover="transform:scale(1.05);">
+    </div>
+  </div>
+  <div data-reveal="text" style="max-width:1100px;margin:64px auto 0;padding-top:56px;border-top:1px solid rgba(29,29,26,0.12);text-align:center;animation:tsardaki-reveal 0.7s ease-out both;transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
+    <div style="font-family:'Spectral',serif;font-size:20px;color:#1D1D1A;margin-bottom:44px;">4.6 <span style="color:#A58A5B;">★</span> · 270 Google Reviews</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:48px;margin-bottom:40px;">
+      <p style="font-family:'Spectral',serif;font-style:italic;font-size:17px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0;">“Respectable hosts, great food selection, wonderful service and staff.”</p>
+      <p style="font-family:'Spectral',serif;font-style:italic;font-size:17px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0;">“Delicious and perfectly prepared.”</p>
+      <p style="font-family:'Spectral',serif;font-style:italic;font-size:17px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0;">“Freshly prepared seafood, homemade salads and wonderful service.”</p>
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;color:#A58A5B;text-decoration:none;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid rgba(165,138,91,0.4);padding-bottom:4px;transition:border-color 0.25s ease, color 0.25s ease, gap 0.25s ease;" style-hover="border-bottom-color:#A58A5B;color:#8a6d43;gap:11px;">Read All Reviews on Google <span>→</span></a>
+  </div>
+</section>
+
+<section class="ts-section-xl" style="padding:clamp(96px,14vw,140px) clamp(24px,6vw,48px);text-align:center;">
+  <div style="max-width:1100px;margin:0 auto;animation:tsardaki-reveal 0.7s ease-out both;">
+    <div data-reveal="text" style="max-width:520px;margin:0 auto 48px;transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
+      <div style="width:32px;height:2px;background:#A58A5B;margin:0 auto 28px;"></div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px;">
+        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">04</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">By the Sea</span>
+      </div>
+      <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 20px;color:#1D1D1A;">By the Harbour</h2>
+      <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0 0 18px;">Right on the harbour of Nea Skioni, <br>where the boats rest and the sea meets the sky.</p>
+      <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0;">A waterfront setting for slow afternoons, relaxed evenings and the simple pleasure of watching life unfold around the harbour.</p>
+    </div>
+    <div data-parallax="true" style="aspect-ratio:1364/768;overflow:hidden;border:1px solid rgba(29,29,26,0.12);">
+      <img src="assets/harbour-sunset.jpg" alt="Sunset over the harbour of Nea Skioni" style="width:100%;height:100%;object-fit:contain;display:block;animation:tsardaki-sea-drift 14s ease-in-out infinite;">
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="background:#1D1D1A;color:#F4F0E8;padding:clamp(72px,12vw,96px) clamp(24px,6vw,48px) 64px;position:relative;overflow:hidden;">
+  
+  <div style="max-width: 1100px; margin: 0 auto; animation: tsardaki-reveal 0.7s ease-out both; position: relative">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">05</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">Visit Tsardaki</span>
+    </div>
+    <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 16px;color:#F4F0E8;">Find Tsardaki</h2>
+    <div style="font-size:14px;letter-spacing:0.04em;color:#F4F0E8;margin-bottom:56px;">4.6 <span style="color: rgb(165, 138, 91); font-weight: 700;">★</span> · 270 Google Reviews</div>
+    <div class="ts-gap-lg" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:64px;">
+      <ul data-reveal="text" style="list-style:none;margin:0;padding:0;transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
+        <li style="padding:16px 0;border-bottom:1px solid rgba(244,240,232,0.15);">
+          <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#F4F0E8;margin-bottom:4px;">Free Parking</div>
+          <div style="font-size:14px;color:rgba(244,240,232,0.6);">Free parking is available to guests nearby.</div>
+        </li>
+        <li style="padding:16px 0;border-bottom:1px solid rgba(244,240,232,0.15);">
+          <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#F4F0E8;margin-bottom:4px;">Harbour View</div>
+          <div style="font-size:14px;color:rgba(244,240,232,0.6);">Enjoy views of the harbour from the restaurant.</div>
+        </li>
+        <li style="padding:16px 0;border-bottom:1px solid rgba(244,240,232,0.15);">
+          <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#F4F0E8;margin-bottom:4px;">Open All Year</div>
+          <div style="font-size:14px;color:rgba(244,240,232,0.6);">Tsardaki welcomes guests throughout the year.</div>
+        </li>
+        <li style="padding:16px 0;border-bottom:1px solid rgba(244,240,232,0.15);">
+          <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+            <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#F4F0E8;margin-bottom:4px;">Monday &amp; Tuesday · Closed</div>
+            <div style="font-size:14px;color:rgba(244,240,232,0.6);">Wednesday - Saturday · 12:00 - 23:30 · Sunday · 11:00 - 23:30</div>
+          </sc-if>
+          <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#F4F0E8;margin-bottom:4px;">Monday &amp; Tuesday · Closed</div>
+            <div style="font-size:14px;color:rgba(244,240,232,0.6);">Wednesday - Saturday · 12:00 - 23:30</div>
+            <div style="font-size:14px;color:rgba(244,240,232,0.6);">Sunday · 11:00 - 23:30</div>
+          </sc-if>
+        </li>
+        <li style="padding:16px 0;border-bottom:1px solid rgba(244,240,232,0.15);">
+          <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#F4F0E8;margin-bottom:4px;">Free Wi-Fi</div>
+          <div style="font-size:14px;color:rgba(244,240,232,0.6);">Complimentary Wi-Fi is available.</div>
+        </li>
+        <li style="padding:16px 0;border-bottom:1px solid rgba(244,240,232,0.15);">
+          <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#F4F0E8;margin-bottom:4px;">Dogs Welcome</div>
+          <div style="font-size:14px;color:rgba(244,240,232,0.6);">Dogs are welcome on the terrace.</div>
+        </li>
+        <li style="padding:16px 0;">
+          <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#F4F0E8;margin-bottom:4px;">Accessibility</div>
+          <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+            <div style="font-size:14px;color:rgba(244,240,232,0.6);">A few steps lead inside. <br>Wheelchair users are welcome, our team is happy to assist.</div>
+          </sc-if>
+          <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:14px;color:rgba(244,240,232,0.6);">A few steps lead inside. Wheelchair users <br>are welcome, our team is happy to assist.</div>
+          </sc-if>
+        </li>
+      </ul>
+      <div data-reveal="text" style="transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
+        <div style="position:relative;">
+          <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+            <img src="assets/logo-tsardaki.png" alt="" style="position:absolute;top:16px;right:0;height:calc(100% - 36px);width:auto;opacity:0.07;pointer-events:none;">
+          </sc-if>
+          <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(244,240,232,0.55);margin-bottom:12px;">Location</div>
+          <div style="margin-bottom:6px;font-family:'Spectral',serif;font-size:22px;">Taverna Tsardaki</div>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;color:rgba(244,240,232,0.75);text-decoration:none;font-size:16px;margin-bottom:36px;border-bottom:1px solid rgba(244,240,232,0.3);transition:color 0.25s ease, border-color 0.25s ease, gap 0.25s ease;" style-hover="color:#F4F0E8;border-bottom-color:#F4F0E8;gap:11px;">Nea Skioni 63085, Greece <span>→</span></a>
+        </div>
+        <div><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" class="ts-cta-directions" style="display:inline-block;background:#A58A5B;color:#1D1D1A;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;margin-bottom:48px;transition:background-color 0.25s ease, transform 0.25s ease;" style-hover="background:#7f6640;transform:translateY(-2px);">Get Directions</a></div>
+        <div class="ts-contact-actions" style="display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid rgba(244,240,232,0.15);padding-top:28px;">
+          <a href="tel:+306938186444" style="display:flex;align-items:center;gap:12px;color:#F4F0E8;text-decoration:none;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;transition:opacity 0.2s ease;" style-hover="opacity:0.7;">
+            <span style="display:inline-flex;width:32px;height:32px;border:1px solid rgba(244,240,232,0.35);border-radius:50%;align-items:center;justify-content:center;flex-shrink:0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F4F0E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+            +30 693 818 6444
+          </a>
+          <a href="https://wa.me/306938186444" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;color:#F4F0E8;text-decoration:none;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;transition:opacity 0.2s ease;" style-hover="opacity:0.7;">
+            <span style="display:inline-flex;width:32px;height:32px;border:1px solid rgba(244,240,232,0.35);border-radius:50%;align-items:center;justify-content:center;flex-shrink:0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F4F0E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.7L2 22l4.4-1.6a11 11 0 0 0 15.5-8.4 11 11 0 0 0-1.4-8.5z"></path><path d="M8.5 8.5c0 4 3 7 7 7"></path></svg></span>
+            WhatsApp · Call or message us
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;color:#F4F0E8;text-decoration:none;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;transition:opacity 0.2s ease;" style-hover="opacity:0.7;">
+            <span style="display:inline-flex;width:32px;height:32px;border:1px solid rgba(244,240,232,0.35);border-radius:50%;align-items:center;justify-content:center;flex-shrink:0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F4F0E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+            Nea Skioni · Halkidiki
+          </a>
+          <a href="https://www.facebook.com/TsardakiTaverna/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;color:#F4F0E8;text-decoration:none;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;transition:opacity 0.2s ease;" style-hover="opacity:0.7;">
+            <span style="display:inline-flex;width:32px;height:32px;border:1px solid rgba(244,240,232,0.35);border-radius:50%;align-items:center;justify-content:center;flex-shrink:0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F4F0E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></span>
+            Taverna Tsardaki
+          </a>
+        </div>
+      </div>
+    </div>
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <img src="assets/logo-tsardaki.png" alt="" style="position: absolute; top: 21px; width: 420px; max-width: 38%; height: auto; opacity: 0.07; pointer-events: none; left: 746px">
+  </sc-if>
+  </div>
+</section>
+
+<footer style="background:#F4F0E8;padding:56px 24px 32px;border-top:1px solid rgba(29,29,26,0.1);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;">
+        <div>
+          <div style="font-family:'Spectral',serif;color:#1D1D1A;font-size:20px;letter-spacing:0.09em;margin-bottom:6px;">TSARDAKI</div>
+          <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.55);font-size:13px;">The sea. The food. The table.</div>
+        </div>
+        <div style="display:flex;gap:14px;">
+          <a href="https://www.facebook.com/TsardakiTaverna/" target="_blank" rel="noopener" aria-label="Facebook" style="display:inline-flex;width:38px;height:38px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;transition:background-color 0.25s ease, border-color 0.25s ease;" style-hover="background:#A58A5B;border-color:#A58A5B;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" aria-label="Google Maps" style="display:inline-flex;width:38px;height:38px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;transition:background-color 0.25s ease, border-color 0.25s ease;" style-hover="background:#A58A5B;border-color:#A58A5B;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </a>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(29,29,26,0.1);padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;">© 2026 Taverna Tsardaki. All rights reserved.</div>
+        <div style="display:flex;gap:24px;">
+          <a href="#" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Privacy Policy</a>
+          <a href="#visit" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Accessibility</a>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding-bottom:28px;">
+        <div>
+          <div style="font-family:'Spectral',serif;color:#1D1D1A;font-size:19px;letter-spacing:0.09em;margin-bottom:6px;">TSARDAKI</div>
+          <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.55);font-size:13px;">The sea. The food. The table.</div>
+        </div>
+        <div style="display:flex;gap:14px;">
+          <a href="https://www.facebook.com/TsardakiTaverna/" target="_blank" rel="noopener" aria-label="Facebook" style="display:inline-flex;width:38px;height:38px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;transition:background-color 0.25s ease, border-color 0.25s ease;" style-hover="background:#A58A5B;border-color:#A58A5B;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" aria-label="Google Maps" style="display:inline-flex;width:38px;height:38px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;transition:background-color 0.25s ease, border-color 0.25s ease;" style-hover="background:#A58A5B;border-color:#A58A5B;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </a>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(29,29,26,0.1);padding-top:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;">
+        <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;">© 2026 Taverna Tsardaki. All rights reserved.</div>
+        <div style="display:flex;gap:20px;">
+          <a href="#" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Privacy Policy</a>
+          <a href="#visit" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Accessibility</a>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    isMobile: typeof window !== 'undefined' ? window.innerWidth <= 768 : false,
+    menuOpen: false
+  };
+
+  componentDidMount() {
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const id = window.location.hash.slice(1);
+      const scrollToTarget = () => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView();
+      };
+      setTimeout(scrollToTarget, 200);
+      setTimeout(scrollToTarget, 500);
+      setTimeout(scrollToTarget, 900);
+      setTimeout(scrollToTarget, 1500);
+      window.addEventListener('load', scrollToTarget);
+    }
+    this._onResize = () => {
+      const mobile = window.innerWidth <= 768;
+      if (mobile !== this.state.isMobile) this.setState({ isMobile: mobile, menuOpen: false });
+    };
+    window.addEventListener('resize', this._onResize);
+    window.addEventListener('load', this._onResize);
+    this._onResize();
+    requestAnimationFrame(this._onResize);
+    if (typeof ResizeObserver !== 'undefined') {
+      this._ro = new ResizeObserver(this._onResize);
+      this._ro.observe(document.documentElement);
+    }
+    let ticks = 0;
+    this._poll = setInterval(() => {
+      this._onResize();
+      if (++ticks > 20) clearInterval(this._poll);
+    }, 100);
+    setTimeout(() => this._initMotion(), 60);
+  }
+
+  _initMotion() {
+    const reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    const mobile = window.innerWidth <= 768;
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    revealEls.forEach((el) => {
+      if (el.dataset.revealInit) return;
+      el.dataset.revealInit = '1';
+      const isImg = el.getAttribute('data-reveal') === 'img';
+      const y = isImg ? (mobile ? 10 : 16) : (mobile ? 8 : 14);
+      el.style.opacity = '0';
+      el.style.transform = isImg ? `translateY(${y}px) scale(${mobile ? 1.01 : 1.02})` : `translateY(${y}px)`;
+    });
+    this._revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0) scale(1)';
+          this._revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach((el) => this._revealObserver.observe(el));
+
+    if (!mobile) {
+      this._parallaxEls = Array.from(document.querySelectorAll('[data-parallax]'));
+      if (this._parallaxEls.length) {
+        this._onParallaxScroll = () => {
+          const vh = window.innerHeight;
+          this._parallaxEls.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            const center = rect.top + rect.height / 2 - vh / 2;
+            const offset = Math.max(-18, Math.min(18, center * -0.04));
+            el.style.transform = `translateY(${offset}px)`;
+          });
+        };
+        window.addEventListener('scroll', this._onParallaxScroll, { passive: true });
+        this._onParallaxScroll();
+      }
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('load', this._onResize);
+    if (this._ro) this._ro.disconnect();
+    if (this._poll) clearInterval(this._poll);
+    if (this._revealObserver) this._revealObserver.disconnect();
+    if (this._onParallaxScroll) window.removeEventListener('scroll', this._onParallaxScroll);
+  }
+
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+  closeMenu = () => this.setState({ menuOpen: false });
+
+  renderVals() {
+    const { isMobile, menuOpen } = this.state;
+    return {
+      isDesktop: !isMobile,
+      isMobile,
+      menuOpen,
+      menuClosed: !menuOpen,
+      toggleMenu: this.toggleMenu,
+      closeMenu: this.closeMenu,
+      navTextColor: '#F4F0E8',
+      heroTextMaxWidth: isMobile ? '640px' : 'min(1360px, 94vw)',
+      navInnerPadding: isMobile ? '19px 0' : '22px 0',
+      navBarStyle: `position:fixed;top:0;left:0;right:0;z-index:100;padding:0 clamp(24px,6vw,48px);background:#1D1D1A;border-bottom:1px solid rgba(244,240,232,0.12);`
+    };
+  }
+}
+</script>
+</body>
+</html>
