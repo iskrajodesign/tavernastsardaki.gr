@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<style>x-dc{display:none!important}
+/* Static first paint of the hero photo, removed once the page has rendered. */
+#ts-poster,#ts-poster *{box-sizing:border-box}
+@media (max-width:768px){#ts-poster .ts-hero{height:auto!important;min-height:100vh!important;min-height:100svh!important}#ts-poster .ts-hero-photo{filter:none!important}}
+</style>
+<style>
+@font-face{font-family:'Spectral';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/spectral-400.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/spectral-500.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/spectral-600.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/spectral-700.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/spectral-800.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:900;font-display:swap;src:url(fonts/spectral-800.woff2) format('woff2');}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/work-sans-400.woff2) format('woff2');}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/work-sans-500.woff2) format('woff2');}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/work-sans-600.woff2) format('woff2');}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/work-sans-700.woff2) format('woff2');}
+</style>
+<link rel="preload" as="image" type="image/webp" fetchpriority="high" href="assets/hero-test1-960.webp" imagesrcset="assets/hero-test1-640.webp 640w, assets/hero-test1-800.webp 800w, assets/hero-test1-960.webp 960w, assets/hero-test1-1524.webp 1524w" imagesizes="100vw">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/spectral-800.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/work-sans-600.woff2">
+<script defer src="vendor/react.production.min.js"></script>
+<script defer src="vendor/react-dom.production.min.js"></script>
+<script defer src="support.js"></script>
 </head>
 <body>
+<div id="ts-poster" aria-hidden="true" style="position:absolute;top:0;left:0;right:0;z-index:1;pointer-events:none;">
+  <section class="ts-hero" style="position:relative;height:100vh;min-height:520px;display:flex;flex-direction:column;overflow:hidden;">
+    <div style="position:relative;flex:1;min-height:0;background-color:#1D1D1A;">
+      <div class="ts-hero-photo" style="position:absolute;inset:0;overflow:hidden;filter:blur(1.2px);transform:scale(1.02);"><img src="assets/hero-test1-960.webp" srcset="assets/hero-test1-640.webp 640w, assets/hero-test1-800.webp 800w, assets/hero-test1-960.webp 960w, assets/hero-test1-1524.webp 1524w" sizes="100vw" width="1524" height="704" alt="" fetchpriority="high" style="position:absolute;left:0;bottom:0;width:100%;height:auto;display:block;"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 640px 460px at 50% 50%, rgba(29,29,26,0.52) 0%, rgba(29,29,26,0.24) 45%, rgba(29,29,26,0) 75%);"></div>
+    </div>
+    <div style="background:#1D1D1A;border-top:1px solid rgba(244,240,232,0.12);height:52px;flex-shrink:0;"></div>
+  </section>
+</div>
 <x-dc>
 <helmet>
 <title>Taverna Tsardaki | Seafood Restaurant in Nea Skioni, Halkidiki</title>
@@ -49,9 +80,6 @@
   }
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700;800;900&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 html { scroll-behavior: smooth; }
 body { margin: 0; -webkit-font-smoothing: antialiased; }
@@ -72,7 +100,7 @@ a { color: inherit; }
   .ts-contact-actions { gap: 20px !important; }
   .ts-story-text { order: -1 !important; }
   .ts-hero { height: auto !important; min-height: 100vh !important; min-height: 100svh !important; }
-  .ts-hero-inner { align-items: flex-start !important; padding-top: 118px !important; padding-bottom: calc(100vw * 704 / 1524 + 28px) !important; min-height: calc(100svh - 48px); }
+  .ts-hero-inner { align-items: flex-start !important; padding-top: 118px !important; padding-bottom: calc(100vw * 704 / 1524 + 28px) !important; min-height: calc(100svh - 52px); }
   .ts-rating { font-size: 12px !important; letter-spacing: 0.06em !important; margin-top: 16px !important; }
   .ts-contact-actions a { min-width: 0 !important; width: 100% !important; font-size: 13px !important; letter-spacing: 0.04em !important; }
   .ts-contact-actions a { align-items: flex-start !important; }
@@ -92,7 +120,7 @@ a { color: inherit; }
 <div style="{{ navBarStyle }}">
   <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:{{ navInnerPadding }};overflow:visible;">
     <a href="#home" style="display:flex;align-items:center;text-decoration:none;overflow:visible;">
-      <img src="assets/logo-tsardaki.png" alt="Taverna Tsardaki logo" style="height:88px;width:auto;object-fit:contain;display:block;margin:-22px 0;">
+      <img src="assets/logo-tsardaki-200.webp" srcset="assets/logo-tsardaki-200.webp 200w, assets/logo-tsardaki-499.webp 499w" sizes="88px" width="499" height="499" alt="Taverna Tsardaki logo" decoding="async" style="height:88px;width:auto;object-fit:contain;display:block;margin:-22px 0;">
     </a>
 
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
@@ -134,9 +162,10 @@ a { color: inherit; }
   </div>
 </sc-if>
 
+<main>
 <section id="home" class="ts-hero" style="position:relative;height:100vh;min-height:520px;display:flex;flex-direction:column;overflow:hidden;">
   <div style="position:relative;flex:1;min-height:0;background-color:#1D1D1A;">
-    <div class="ts-hero-photo" style="position:absolute;inset:0;background-image:url('assets/hero-test1.jpg');background-size:100% auto;background-repeat:no-repeat;background-position:center bottom;filter:blur(1.2px);transform:scale(1.02);pointer-events:none;"></div>
+    <div class="ts-hero-photo" style="position:absolute;inset:0;overflow:hidden;filter:blur(1.2px);transform:scale(1.02);pointer-events:none;"><img src="assets/hero-test1-960.webp" srcset="assets/hero-test1-640.webp 640w, assets/hero-test1-800.webp 800w, assets/hero-test1-960.webp 960w, assets/hero-test1-1524.webp 1524w" sizes="100vw" width="1524" height="704" alt="" fetchpriority="high" style="position:absolute;left:0;bottom:0;width:100%;height:auto;display:block;"></div>
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse 640px 460px at 50% 50%, rgba(29,29,26,0.52) 0%, rgba(29,29,26,0.24) 45%, rgba(29,29,26,0) 75%);pointer-events:none;"></div>
     <div class="ts-hero-inner" style="position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:center;padding:clamp(56px,8vw,80px) clamp(24px,5vw,48px) clamp(12px,2vw,24px);overflow:hidden;">
       <div style="max-width:{{ heroTextMaxWidth }};text-align:center;">
@@ -192,12 +221,12 @@ a { color: inherit; }
 <section id="story" style="padding:clamp(72px,12vw,96px) clamp(24px,6vw,48px);">
   <div class="ts-gap-lg" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:64px;align-items:center;animation:tsardaki-reveal 0.7s ease-out both;">
     <div data-parallax="true" style="max-width:250px;margin:0 auto;width:100%;aspect-ratio:647/1332;overflow:hidden;border:1px solid rgba(29,29,26,0.12);">
-      <img src="assets/kostas.jpg" alt="Kostas Tseledidis" style="width:100%;height:100%;object-fit:contain;display:block;transition:transform 0.7s ease;" style-hover="transform:scale(1.05);">
+      <img src="assets/kostas-647.webp" srcset="assets/kostas-480.webp 480w, assets/kostas-647.webp 647w" sizes="250px" width="647" height="1332" alt="Kostas Tseledidis" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block;transition:transform 0.7s ease;" style-hover="transform:scale(1.05);">
     </div>
     <div class="ts-story-text" data-reveal="text" style="transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">01</span>
-        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">Our Story</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#7F6640;">01</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7F6640;">Our Story</span>
       </div>
       <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 24px;color:#1D1D1A;">A Place to Come Back To</h2>
       <p style="font-size:16px;line-height:1.7;color:rgba(29,29,26,0.72);max-width:440px;margin:0 0 20px;">Taverna Tsardaki began in 2019, with a love for Greek hospitality and the pleasure of bringing people together around the table. Today, Chef and owner Kostas Tselekidis keeps that spirit alive in his own way.</p>
@@ -210,8 +239,8 @@ a { color: inherit; }
   <div style="max-width:1100px;margin:0 auto;animation:tsardaki-reveal 0.7s ease-out both;">
     <div style="max-width:600px;margin:0 auto 56px;text-align:center;">
       <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px;">
-        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">02</span>
-        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">Our Food</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#7F6640;">02</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7F6640;">Our Food</span>
       </div>
       <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 20px;color:#1D1D1A;">Simple ingredients.<br></h2>
       <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0;">Flavours of the sea and the grill, made with care.</p>
@@ -221,47 +250,47 @@ a { color: inherit; }
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;align-items:stretch;">
         <div style="display:flex;flex-direction:column;align-items:center;text-align:center;border:1px solid rgba(29,29,26,0.12);">
           <div data-reveal="img" style="width:100%;aspect-ratio:1301/816;overflow:hidden;border-bottom:1px solid rgba(29,29,26,0.12);transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
-            <img src="assets/food-the-sea.jpg" alt="Grilled octopus salad" style="width:100%;height:100%;object-fit:fill;display:block;">
+            <img src="assets/food-the-sea-800.webp" srcset="assets/food-the-sea-240.webp 240w, assets/food-the-sea-480.webp 480w, assets/food-the-sea-800.webp 800w, assets/food-the-sea-1301.webp 1301w" sizes="340px" width="1301" height="816" alt="Grilled octopus salad" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:fill;display:block;">
           </div>
           <div data-reveal="text" style="padding:28px 28px 40px;display:flex;flex-direction:column;align-items:center;flex:1;transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
             <span style="display:inline-flex;width:44px;height:44px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;margin-bottom:20px;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 3-8 8-8 13h16c0-5-4-10-8-13z"></path><path d="M12 6v10M8 9.5v6.5M16 9.5v6.5"></path></svg>
             </span>
-            <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A58A5B;margin-bottom:10px;">The Sea</div>
+            <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#7F6640;margin-bottom:10px;">The Sea</div>
             <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:22px;line-height:1.25;margin:0 0 16px;color:#1D1D1A;">Fresh From the Aegean</h3>
             <span style="width:28px;height:1px;background:rgba(29,29,26,0.2);display:block;margin-bottom:16px;flex-shrink:0;"></span>
             <p style="font-size:14px;line-height:1.65;color:rgba(29,29,26,0.68);margin:0 0 28px;max-width:260px;flex:1;">Fresh seafood and the flavours of the Aegean, <br>prepared to let the ingredients speak for themselves.</p>
-            <a href="seafood-menu.html" style="color:#A58A5B;border:1px solid #A58A5B;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;flex-shrink:0;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;transform:translateY(-2px);">Explore Seafood →</a>
+            <a href="seafood-menu.html" style="color:#7F6640;border:1px solid #A58A5B;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;flex-shrink:0;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;transform:translateY(-2px);">Explore Seafood →</a>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;align-items:center;text-align:center;border:1px solid rgba(29,29,26,0.12);">
           <div data-reveal="img" style="width:100%;aspect-ratio:1301/816;overflow:hidden;border-bottom:1px solid rgba(29,29,26,0.12);transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
-            <img src="assets/food-grill.jpg" alt="Grilled whole fish with salad" style="width:100%;height:100%;object-fit:fill;display:block;">
+            <img src="assets/food-grill-800.webp" srcset="assets/food-grill-240.webp 240w, assets/food-grill-480.webp 480w, assets/food-grill-800.webp 800w, assets/food-grill-1301.webp 1301w" sizes="340px" width="1301" height="816" alt="Grilled whole fish with salad" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:fill;display:block;">
           </div>
           <div data-reveal="text" style="padding:28px 28px 40px;display:flex;flex-direction:column;align-items:center;flex:1;transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
             <span style="display:inline-flex;width:44px;height:44px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;margin-bottom:20px;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-2 4-2 7a3 3 0 003 3c2 0 3-1.5 3-3 2 2 3 5 3 7a7 7 0 11-14 0c0-4 2-6 3-9 1 1 1 2 2 2 0-3-1-5 2-7z"></path></svg>
             </span>
-            <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A58A5B;margin-bottom:10px;">From the Grill</div>
+            <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#7F6640;margin-bottom:10px;">From the Grill</div>
             <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:22px;line-height:1.25;margin:0 0 16px;color:#1D1D1A;">Simply Prepared</h3>
             <span style="width:28px;height:1px;background:rgba(29,29,26,0.2);display:block;margin-bottom:16px;flex-shrink:0;"></span>
             <p style="font-size:14px;line-height:1.65;color:rgba(29,29,26,0.68);margin:0 0 28px;max-width:260px;flex:1;">From the fire to the table, with carefully selected meat and the unmistakable character of proper grilling.</p>
-            <a href="grill-menu.html" style="color:#A58A5B;border:1px solid #A58A5B;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;flex-shrink:0;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;transform:translateY(-2px);">Explore the Grill →</a>
+            <a href="grill-menu.html" style="color:#7F6640;border:1px solid #A58A5B;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;flex-shrink:0;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;transform:translateY(-2px);">Explore the Grill →</a>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;align-items:center;text-align:center;border:1px solid rgba(29,29,26,0.12);">
           <div data-reveal="img" style="width:100%;aspect-ratio:1264/793;overflow:hidden;border-bottom:1px solid rgba(29,29,26,0.12);transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
-            <img src="assets/food-made-here.jpg" alt="Tzatziki" style="width:100%;height:100%;object-fit:fill;display:block;">
+            <img src="assets/food-made-here-800.webp" srcset="assets/food-made-here-240.webp 240w, assets/food-made-here-480.webp 480w, assets/food-made-here-800.webp 800w, assets/food-made-here-1264.webp 1264w" sizes="340px" width="1264" height="793" alt="Tzatziki" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:fill;display:block;">
           </div>
           <div data-reveal="text" style="padding:28px 28px 40px;display:flex;flex-direction:column;align-items:center;flex:1;transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
             <span style="display:inline-flex;width:44px;height:44px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;margin-bottom:20px;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A58A5B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8 1 14-5 14-14C10 5 4 11 5 19z"></path><path d="M5 19c3-5 6-8 10-11"></path></svg>
             </span>
-            <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A58A5B;margin-bottom:10px;">Made Here</div>
+            <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#7F6640;margin-bottom:10px;">Made Here</div>
             <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:22px;line-height:1.25;margin:0 0 16px;color:#1D1D1A;">Made With Care</h3>
             <span style="width:28px;height:1px;background:rgba(29,29,26,0.2);display:block;margin-bottom:16px;flex-shrink:0;"></span>
             <p style="font-size:14px;line-height:1.65;color:rgba(29,29,26,0.68);margin:0 0 28px;max-width:260px;flex:1;">Homemade dishes prepared in our kitchen, bringing familiar Greek flavours and a sense of something made especially for the table.</p>
-            <a href="made-here-menu.html" style="color:#A58A5B;border:1px solid #A58A5B;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;flex-shrink:0;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;transform:translateY(-2px);">Explore the Table →</a>
+            <a href="made-here-menu.html" style="color:#7F6640;border:1px solid #A58A5B;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;flex-shrink:0;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;transform:translateY(-2px);">Explore the Table →</a>
           </div>
         </div>
       </div>
@@ -272,41 +301,41 @@ a { color: inherit; }
         <div style="display:flex;flex-direction:column;border:1px solid rgba(29,29,26,0.12);padding:14px;">
           <div style="display:flex;align-items:flex-start;gap:18px;">
             <div data-reveal="img" style="width:110px;aspect-ratio:1301/816;flex-shrink:0;overflow:hidden;border:1px solid rgba(29,29,26,0.12);transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1);">
-              <img src="assets/food-the-sea.jpg" alt="Grilled octopus salad" style="width:100%;height:100%;object-fit:fill;display:block;">
+              <img src="assets/food-the-sea-800.webp" srcset="assets/food-the-sea-240.webp 240w, assets/food-the-sea-480.webp 480w, assets/food-the-sea-800.webp 800w, assets/food-the-sea-1301.webp 1301w" sizes="110px" width="1301" height="816" alt="Grilled octopus salad" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:fill;display:block;">
             </div>
             <div data-reveal="text" style="flex:1;min-width:0;transition:opacity 0.7s cubic-bezier(.16,1,.3,1) 0.08s, transform 0.7s cubic-bezier(.16,1,.3,1) 0.08s;">
-              <div style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#A58A5B;margin-bottom:6px;">The Sea</div>
+              <div style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#7F6640;margin-bottom:6px;">The Sea</div>
               <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:18px;line-height:1.25;margin:0 0 10px;color:#1D1D1A;">Fresh From the Aegean</h3>
               <span style="width:20px;height:1px;background:rgba(29,29,26,0.2);display:block;"></span>
             </div>
           </div>
-          <a href="seafood-menu.html" style="display:block;text-align:center;margin-top:16px;color:#A58A5B;border:1px solid #A58A5B;padding:12px 16px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;">Explore Seafood →</a>
+          <a href="seafood-menu.html" style="display:block;text-align:center;margin-top:16px;color:#7F6640;border:1px solid #A58A5B;padding:12px 16px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;">Explore Seafood →</a>
         </div>
         <div style="display:flex;flex-direction:column;border:1px solid rgba(29,29,26,0.12);padding:14px;">
           <div style="display:flex;align-items:flex-start;gap:18px;">
             <div data-reveal="img" style="width:110px;aspect-ratio:1301/816;flex-shrink:0;overflow:hidden;border:1px solid rgba(29,29,26,0.12);transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1);">
-              <img src="assets/food-grill.jpg" alt="Grilled whole fish with salad" style="width:100%;height:100%;object-fit:fill;display:block;">
+              <img src="assets/food-grill-800.webp" srcset="assets/food-grill-240.webp 240w, assets/food-grill-480.webp 480w, assets/food-grill-800.webp 800w, assets/food-grill-1301.webp 1301w" sizes="110px" width="1301" height="816" alt="Grilled whole fish with salad" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:fill;display:block;">
             </div>
             <div data-reveal="text" style="flex:1;min-width:0;transition:opacity 0.7s cubic-bezier(.16,1,.3,1) 0.08s, transform 0.7s cubic-bezier(.16,1,.3,1) 0.08s;">
-              <div style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#A58A5B;margin-bottom:6px;">From the Grill</div>
+              <div style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#7F6640;margin-bottom:6px;">From the Grill</div>
               <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:18px;line-height:1.25;margin:0 0 10px;color:#1D1D1A;">Simply Prepared</h3>
               <span style="width:20px;height:1px;background:rgba(29,29,26,0.2);display:block;"></span>
             </div>
           </div>
-          <a href="grill-menu.html" style="display:block;text-align:center;margin-top:16px;color:#A58A5B;border:1px solid #A58A5B;padding:12px 16px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;">Explore the Grill →</a>
+          <a href="grill-menu.html" style="display:block;text-align:center;margin-top:16px;color:#7F6640;border:1px solid #A58A5B;padding:12px 16px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;">Explore the Grill →</a>
         </div>
         <div style="display:flex;flex-direction:column;border:1px solid rgba(29,29,26,0.12);padding:14px;">
           <div style="display:flex;align-items:flex-start;gap:18px;">
             <div data-reveal="img" style="width:110px;aspect-ratio:1264/793;flex-shrink:0;overflow:hidden;border:1px solid rgba(29,29,26,0.12);transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1);">
-              <img src="assets/food-made-here.jpg" alt="Tzatziki" style="width:100%;height:100%;object-fit:fill;display:block;">
+              <img src="assets/food-made-here-800.webp" srcset="assets/food-made-here-240.webp 240w, assets/food-made-here-480.webp 480w, assets/food-made-here-800.webp 800w, assets/food-made-here-1264.webp 1264w" sizes="110px" width="1264" height="793" alt="Tzatziki" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:fill;display:block;">
             </div>
             <div data-reveal="text" style="flex:1;min-width:0;transition:opacity 0.7s cubic-bezier(.16,1,.3,1) 0.08s, transform 0.7s cubic-bezier(.16,1,.3,1) 0.08s;">
-              <div style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#A58A5B;margin-bottom:6px;">Made Here</div>
+              <div style="font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#7F6640;margin-bottom:6px;">Made Here</div>
               <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:18px;line-height:1.25;margin:0 0 10px;color:#1D1D1A;">Made With Care</h3>
               <span style="width:20px;height:1px;background:rgba(29,29,26,0.2);display:block;"></span>
             </div>
           </div>
-          <a href="made-here-menu.html" style="display:block;text-align:center;margin-top:16px;color:#A58A5B;border:1px solid #A58A5B;padding:12px 16px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;">Explore the Table →</a>
+          <a href="made-here-menu.html" style="display:block;text-align:center;margin-top:16px;color:#7F6640;border:1px solid #A58A5B;padding:12px 16px;border-radius:6px;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:background-color 0.25s ease, color 0.25s ease;cursor:pointer;" style-hover="background:#A58A5B;color:#1D1D1A;">Explore the Table →</a>
         </div>
       </div>
     </sc-if>
@@ -318,15 +347,15 @@ a { color: inherit; }
   <div class="ts-gap-lg" style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px;align-items:center;animation:tsardaki-reveal 0.7s ease-out both;">
     <div data-reveal="text" style="flex:1 1 300px;transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">03</span>
-        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">The Table</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#7F6640;">03</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7F6640;">The Table</span>
       </div>
       <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 20px;color:#1D1D1A;">The Way We <br>Welcome You</h2>
       <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);max-width:420px;margin:0 0 18px;">This year, Tsardaki begins a new chapter in a new location, right on the town promenade, next to the harbour. The setting has changed, but what matters around the table has not: good food, familiar flavours and the warmth of a traditional Greek taverna.</p>
       <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);max-width:420px;margin:0;">Come for a long lunch, an easy dinner or simply a table by the harbour. There is room for relaxed afternoons, shared plates and conversations that last a little longer than planned.</p>
     </div>
     <div data-reveal="img" style="flex:1.4 1 380px;aspect-ratio:944/1118;overflow:hidden;border:1px solid rgba(29,29,26,0.12);transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
-      <img src="assets/table.jpg" alt="Taverna Tsardaki terrace" style="width:100%;height:100%;object-fit:contain;display:block;transition:transform 0.7s ease;" style-hover="transform:scale(1.05);">
+      <img src="assets/table-944.webp" srcset="assets/table-480.webp 480w, assets/table-640.webp 640w, assets/table-944.webp 944w" sizes="(max-width: 768px) calc(100vw - 48px), 460px" width="944" height="1118" alt="Taverna Tsardaki terrace" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block;transition:transform 0.7s ease;" style-hover="transform:scale(1.05);">
     </div>
   </div>
   <div data-reveal="text" style="max-width:1100px;margin:64px auto 0;padding-top:56px;border-top:1px solid rgba(29,29,26,0.12);text-align:center;animation:tsardaki-reveal 0.7s ease-out both;transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
@@ -336,7 +365,7 @@ a { color: inherit; }
       <p style="font-family:'Spectral',serif;font-style:italic;font-size:17px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0;">“Delicious and perfectly prepared.”</p>
       <p style="font-family:'Spectral',serif;font-style:italic;font-size:17px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0;">“Freshly prepared seafood, homemade salads and wonderful service.”</p>
     </div>
-    <a href="https://www.google.com/maps/search/?api=1&amp;query=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;color:#A58A5B;text-decoration:none;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid rgba(165,138,91,0.4);padding-bottom:4px;transition:border-color 0.25s ease, color 0.25s ease, gap 0.25s ease;" style-hover="border-bottom-color:#A58A5B;color:#8a6d43;gap:11px;">Read All Reviews on Google <span>→</span></a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Taverna+Tsardaki+Nea+Skioni+63085+Greece" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;color:#7F6640;text-decoration:none;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid rgba(165,138,91,0.4);padding-bottom:4px;transition:border-color 0.25s ease, color 0.25s ease, gap 0.25s ease;" style-hover="border-bottom-color:#A58A5B;color:#8a6d43;gap:11px;">Read All Reviews on Google <span>→</span></a>
   </div>
 </section>
 
@@ -345,15 +374,15 @@ a { color: inherit; }
     <div data-reveal="text" style="max-width:520px;margin:0 auto 48px;transition:opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);">
       <div style="width:32px;height:2px;background:#A58A5B;margin:0 auto 28px;"></div>
       <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px;">
-        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">04</span>
-        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">By the Sea</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#7F6640;">04</span>
+        <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7F6640;">By the Sea</span>
       </div>
       <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 20px;color:#1D1D1A;">By the Harbour</h2>
       <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0 0 18px;">Right on the harbour of Nea Skioni, <br>where the boats rest and the sea meets the sky.</p>
       <p style="font-size:16px;line-height:1.6;color:rgba(29,29,26,0.72);margin:0;">A waterfront setting for slow afternoons, relaxed evenings and the simple pleasure of watching life unfold around the harbour.</p>
     </div>
     <div data-parallax="true" style="aspect-ratio:1364/768;overflow:hidden;border:1px solid rgba(29,29,26,0.12);">
-      <img src="assets/harbour-sunset.jpg" alt="Sunset over the harbour of Nea Skioni" style="width:100%;height:100%;object-fit:contain;display:block;animation:tsardaki-sea-drift 14s ease-in-out infinite;">
+      <img src="assets/harbour-sunset-1024.webp" srcset="assets/harbour-sunset-640.webp 640w, assets/harbour-sunset-1024.webp 1024w, assets/harbour-sunset-1364.webp 1364w" sizes="(max-width: 768px) calc(100vw - 48px), 540px" width="1364" height="768" alt="Sunset over the harbour of Nea Skioni" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block;animation:tsardaki-sea-drift 14s ease-in-out infinite;">
     </div>
   </div>
 </section>
@@ -362,7 +391,7 @@ a { color: inherit; }
   
   <div style="max-width: 1100px; margin: 0 auto; animation: tsardaki-reveal 0.7s ease-out both; position: relative">
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-      <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;opacity:0.6;">05</span>
+      <span style="font-family:'Work Sans',sans-serif;font-size:11px;color:#A58A5B;">05</span>
       <span style="font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A58A5B;">Visit Tsardaki</span>
     </div>
     <h2 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin:0 0 16px;color:#F4F0E8;">Find Tsardaki</h2>
@@ -413,7 +442,7 @@ a { color: inherit; }
       <div data-reveal="text" style="transition:opacity 0.9s cubic-bezier(.16,1,.3,1) 0.1s, transform 0.9s cubic-bezier(.16,1,.3,1) 0.1s;">
         <div style="position:relative;">
           <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-            <img class="ts-visit-logo" src="assets/logo-tsardaki.png" alt="" style="position:absolute;top:16px;right:0;height:calc(100% - 36px);width:auto;max-width:38%;object-fit:contain;opacity:0.07;pointer-events:none;">
+            <img class="ts-visit-logo" src="assets/logo-tsardaki-300.webp" srcset="assets/logo-tsardaki-200.webp 200w, assets/logo-tsardaki-300.webp 300w, assets/logo-tsardaki-499.webp 499w" sizes="140px" width="499" height="499" alt="" loading="lazy" decoding="async" style="position:absolute;top:16px;right:0;height:calc(100% - 36px);width:auto;max-width:38%;object-fit:contain;opacity:0.07;pointer-events:none;">
           </sc-if>
           <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(244,240,232,0.55);margin-bottom:12px;">Location</div>
           <div style="margin-bottom:6px;font-family:'Spectral',serif;font-size:22px;">Taverna Tsardaki</div>
@@ -441,10 +470,11 @@ a { color: inherit; }
       </div>
     </div>
   <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-    <img src="assets/logo-tsardaki.png" alt="" style="position: absolute; top: 21px; width: 420px; max-width: 38%; height: auto; opacity: 0.07; pointer-events: none; left: 746px">
+    <img src="assets/logo-tsardaki-499.webp" width="499" height="499" alt="" loading="lazy" decoding="async" style="position: absolute; top: 21px; width: 420px; max-width: 38%; height: auto; opacity: 0.07; pointer-events: none; left: 746px">
   </sc-if>
   </div>
 </section>
+</main>
 
 <footer style="background:#F4F0E8;padding:56px 24px 32px;border-top:1px solid rgba(29,29,26,0.1);">
   <div style="max-width:1100px;margin:0 auto;">
@@ -452,7 +482,7 @@ a { color: inherit; }
       <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;">
         <div>
           <div style="font-family:'Spectral',serif;color:#1D1D1A;font-size:20px;letter-spacing:0.09em;margin-bottom:6px;">TSARDAKI</div>
-          <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.55);font-size:13px;">The sea. The food. The table.</div>
+          <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.68);font-size:13px;">The sea. The food. The table.</div>
         </div>
         <div style="display:flex;gap:14px;">
           <a href="https://www.facebook.com/TsardakiTaverna/" target="_blank" rel="noopener" aria-label="Facebook" style="display:inline-flex;width:38px;height:38px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;transition:background-color 0.25s ease, border-color 0.25s ease;" style-hover="background:#A58A5B;border-color:#A58A5B;">
@@ -464,10 +494,10 @@ a { color: inherit; }
         </div>
       </div>
       <div style="border-top:1px solid rgba(29,29,26,0.1);padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-        <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;">© 2026 Taverna Tsardaki. All rights reserved.</div>
+        <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.68);font-size:12px;">© 2026 Taverna Tsardaki. All rights reserved.</div>
         <div style="display:flex;gap:24px;">
-          <a href="#" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Privacy Policy</a>
-          <a href="#visit" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Accessibility</a>
+          <a href="#" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.68);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Privacy Policy</a>
+          <a href="#visit" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.68);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Accessibility</a>
         </div>
       </div>
     </sc-if>
@@ -475,7 +505,7 @@ a { color: inherit; }
       <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding-bottom:28px;">
         <div>
           <div style="font-family:'Spectral',serif;color:#1D1D1A;font-size:19px;letter-spacing:0.09em;margin-bottom:6px;">TSARDAKI</div>
-          <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.55);font-size:13px;">The sea. The food. The table.</div>
+          <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.68);font-size:13px;">The sea. The food. The table.</div>
         </div>
         <div style="display:flex;gap:14px;">
           <a href="https://www.facebook.com/TsardakiTaverna/" target="_blank" rel="noopener" aria-label="Facebook" style="display:inline-flex;width:38px;height:38px;border:1px solid rgba(165,138,91,0.4);border-radius:50%;align-items:center;justify-content:center;transition:background-color 0.25s ease, border-color 0.25s ease;" style-hover="background:#A58A5B;border-color:#A58A5B;">
@@ -487,10 +517,10 @@ a { color: inherit; }
         </div>
       </div>
       <div style="border-top:1px solid rgba(29,29,26,0.1);padding-top:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;">
-        <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;">© 2026 Taverna Tsardaki. All rights reserved.</div>
+        <div style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.68);font-size:12px;">© 2026 Taverna Tsardaki. All rights reserved.</div>
         <div style="display:flex;gap:20px;">
-          <a href="#" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Privacy Policy</a>
-          <a href="#visit" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.5);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Accessibility</a>
+          <a href="#" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.68);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Privacy Policy</a>
+          <a href="#visit" style="font-family:'Work Sans',sans-serif;color:rgba(29,29,26,0.68);font-size:12px;text-decoration:none;border-bottom:1px solid transparent;transition:color 0.2s ease, border-color 0.2s ease;" style-hover="color:#1D1D1A;border-color:rgba(29,29,26,0.3);">Accessibility</a>
         </div>
       </div>
     </sc-if>
@@ -502,7 +532,7 @@ a { color: inherit; }
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   state = {
-    isMobile: typeof window !== 'undefined' ? window.innerWidth <= 768 : false,
+    isMobile: typeof window !== 'undefined' ? window.matchMedia('(max-width: 768px)').matches : false,
     menuOpen: false
   };
 
@@ -519,30 +549,32 @@ class Component extends DCLogic {
       setTimeout(scrollToTarget, 1500);
       window.addEventListener('load', scrollToTarget);
     }
+    // matchMedia answers "is this a phone layout" without reading layout, so it
+    // does not force a synchronous reflow the way window.innerWidth can.
+    this._mq = window.matchMedia('(max-width: 768px)');
     this._onResize = () => {
-      const mobile = window.innerWidth <= 768;
+      const mobile = this._mq.matches;
       if (mobile !== this.state.isMobile) this.setState({ isMobile: mobile, menuOpen: false });
     };
-    window.addEventListener('resize', this._onResize);
-    window.addEventListener('load', this._onResize);
+    if (this._mq.addEventListener) this._mq.addEventListener('change', this._onResize);
+    else if (this._mq.addListener) this._mq.addListener(this._onResize);
     this._onResize();
-    requestAnimationFrame(this._onResize);
-    if (typeof ResizeObserver !== 'undefined') {
-      this._ro = new ResizeObserver(this._onResize);
-      this._ro.observe(document.documentElement);
-    }
-    let ticks = 0;
-    this._poll = setInterval(() => {
-      this._onResize();
-      if (++ticks > 20) clearInterval(this._poll);
-    }, 100);
+    this._removePoster();
     setTimeout(() => this._initMotion(), 60);
   }
 
+  _removePoster() {
+    const poster = document.getElementById('ts-poster');
+    if (!poster) return;
+    const done = () => { if (poster.parentNode) poster.parentNode.removeChild(poster); };
+    const img = document.querySelector('#home .ts-hero-photo img');
+    if (img && img.decode) img.decode().then(done, done); else done();
+    setTimeout(done, 1500);
+  }
   _initMotion() {
     const reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduce) return;
-    const mobile = window.innerWidth <= 768;
+    const mobile = window.matchMedia('(max-width: 768px)').matches;
     const revealEls = document.querySelectorAll('[data-reveal]');
     revealEls.forEach((el) => {
       if (el.dataset.revealInit) return;
@@ -566,26 +598,34 @@ class Component extends DCLogic {
     if (!mobile) {
       this._parallaxEls = Array.from(document.querySelectorAll('[data-parallax]'));
       if (this._parallaxEls.length) {
-        this._onParallaxScroll = () => {
+        // Read every rect first, then write every transform, once per frame.
+        this._parallaxFrame = 0;
+        this._applyParallax = () => {
+          this._parallaxFrame = 0;
           const vh = window.innerHeight;
-          this._parallaxEls.forEach((el) => {
-            const rect = el.getBoundingClientRect();
+          const rects = this._parallaxEls.map((el) => el.getBoundingClientRect());
+          this._parallaxEls.forEach((el, i) => {
+            const rect = rects[i];
             const center = rect.top + rect.height / 2 - vh / 2;
             const offset = Math.max(-18, Math.min(18, center * -0.04));
             el.style.transform = `translateY(${offset}px)`;
           });
         };
+        this._onParallaxScroll = () => {
+          if (!this._parallaxFrame) this._parallaxFrame = requestAnimationFrame(this._applyParallax);
+        };
         window.addEventListener('scroll', this._onParallaxScroll, { passive: true });
-        this._onParallaxScroll();
+        this._applyParallax();
       }
     }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this._onResize);
-    window.removeEventListener('load', this._onResize);
-    if (this._ro) this._ro.disconnect();
-    if (this._poll) clearInterval(this._poll);
+    if (this._mq) {
+      if (this._mq.removeEventListener) this._mq.removeEventListener('change', this._onResize);
+      else if (this._mq.removeListener) this._mq.removeListener(this._onResize);
+    }
+    if (this._parallaxFrame) cancelAnimationFrame(this._parallaxFrame);
     if (this._revealObserver) this._revealObserver.disconnect();
     if (this._onParallaxScroll) window.removeEventListener('scroll', this._onParallaxScroll);
   }

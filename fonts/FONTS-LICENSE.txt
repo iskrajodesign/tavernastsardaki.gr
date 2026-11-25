@@ -1,0 +1,2 @@
+Spectral and Work Sans are licensed under the SIL Open Font License 1.1.
+Files are the Latin subsets from the @fontsource packages (@fontsource/spectral 5.3.0, @fontsource/work-sans 5.3.0).
