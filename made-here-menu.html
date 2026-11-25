@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>Made Here | Taverna Tsardaki</title>
+<meta name="description" content="A closer look at what we make ourselves, salads, sides and a sweet finish, prepared simply and served with care.">
+<style>x-dc{display:none!important}</style>
+<style>
+@font-face{font-family:'Spectral';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/spectral-400.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/spectral-500.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/spectral-600.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/spectral-700.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/spectral-800.woff2) format('woff2');}
+@font-face{font-family:'Spectral';font-style:normal;font-weight:900;font-display:swap;src:url(fonts/spectral-800.woff2) format('woff2');}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/work-sans-400.woff2) format('woff2');}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/work-sans-500.woff2) format('woff2');}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/work-sans-600.woff2) format('woff2');}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/work-sans-700.woff2) format('woff2');}
+</style>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/spectral-500.woff2">
+<script defer src="vendor/react.production.min.js"></script>
+<script defer src="vendor/react-dom.production.min.js"></script>
+<script defer src="support.js"></script>
 </head>
 <body>
 <x-dc>
 
 <helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
 body { margin: 0; background: #F4F0E8; -webkit-font-smoothing: antialiased; }
 * { box-sizing: border-box; }
@@ -26,19 +41,19 @@ a { color: inherit; }
   <a href="index.html#menu" style="display:inline-flex;align-items:center;gap:8px;color:#F4F0E8;text-decoration:none;font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;" style-hover="color:#A58A5B;">← Back</a>
 </div>
 <main style="max-width:1000px;margin:0 auto;padding:clamp(56px,9vw,88px) clamp(20px,6vw,48px) 100px;">
-  <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A58A5B;margin-bottom:14px;">Made Here</div>
+  <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#7F6640;margin-bottom:14px;">Made Here</div>
   <h1 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(32px,5vw,48px);line-height:1.15;margin:0 0 20px;color:#1D1D1A;">Made With Care</h1>
   <p style="font-size:16px;line-height:1.65;color:rgba(29,29,26,0.72);max-width:560px;margin:0 0 48px;">A closer look at what we make ourselves, salads, sides and a sweet finish, prepared simply and served with care.</p>
   <div style="display:flex;flex-direction:column;gap:clamp(18px,2.4vw,28px);">
     <div class="coll-row" style="display:flex;align-items:flex-end;">
-      <img class="coll-img" src="assets/food-made-salad.jpg" alt="Greek salad" style="width:33.4%;margin-right:1.7%;flex-shrink:0;aspect-ratio:1301/816;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
-      <img class="coll-img" src="assets/food-made-baked-feta.jpg" alt="Baked feta with tomato and pepper" style="width:33.9%;margin-right:2.9%;flex-shrink:0;aspect-ratio:1408/768;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
-      <img class="coll-img" src="assets/food-made-zucchini.jpg" alt="Fried zucchini with dip" style="width:28.1%;flex-shrink:0;aspect-ratio:1367/768;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
+      <img class="coll-img" fetchpriority="high" src="assets/food-made-salad-960.webp" srcset="assets/food-made-salad-480.webp 480w, assets/food-made-salad-720.webp 720w, assets/food-made-salad-960.webp 960w" sizes="(max-width: 700px) min(420px, 100vw), 360px" width="1301" height="816" alt="Greek salad" decoding="async" style="height:auto;width:33.4%;margin-right:1.7%;flex-shrink:0;aspect-ratio:1301/816;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
+      <img class="coll-img" src="assets/food-made-baked-feta-960.webp" srcset="assets/food-made-baked-feta-480.webp 480w, assets/food-made-baked-feta-720.webp 720w, assets/food-made-baked-feta-960.webp 960w" sizes="(max-width: 700px) min(420px, 100vw), 360px" width="1408" height="768" alt="Baked feta with tomato and pepper" decoding="async" style="height:auto;width:33.9%;margin-right:2.9%;flex-shrink:0;aspect-ratio:1408/768;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
+      <img class="coll-img" src="assets/food-made-zucchini-960.webp" srcset="assets/food-made-zucchini-480.webp 480w, assets/food-made-zucchini-720.webp 720w, assets/food-made-zucchini-960.webp 960w" sizes="(max-width: 700px) min(420px, 100vw), 360px" width="1367" height="768" alt="Fried zucchini with dip" decoding="async" style="height:auto;width:28.1%;flex-shrink:0;aspect-ratio:1367/768;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
     </div>
     <div class="coll-row" style="display:flex;align-items:flex-end;justify-content:flex-end;">
-      <img class="coll-img" src="assets/food-made-grilled-feta.jpg" alt="Grilled feta" style="width:26.4%;margin-right:2.2%;flex-shrink:0;aspect-ratio:1477/720;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
-      <img class="coll-img" src="assets/food-made-dessert.jpg" alt="Homemade dessert with candied orange" style="width:23.6%;margin-right:2.2%;flex-shrink:0;aspect-ratio:1365/768;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
-      <img class="coll-img" src="assets/food-made-mezze-platter.jpg" alt="Mezze platter with baklava, candied orange, olive and fig" style="width:25.4%;flex-shrink:0;aspect-ratio:1524/704;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
+      <img class="coll-img" src="assets/food-made-grilled-feta-960.webp" srcset="assets/food-made-grilled-feta-480.webp 480w, assets/food-made-grilled-feta-720.webp 720w, assets/food-made-grilled-feta-960.webp 960w" sizes="(max-width: 700px) min(420px, 100vw), 360px" width="1477" height="720" alt="Grilled feta" loading="lazy" decoding="async" style="height:auto;width:26.4%;margin-right:2.2%;flex-shrink:0;aspect-ratio:1477/720;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
+      <img class="coll-img" src="assets/food-made-dessert-960.webp" srcset="assets/food-made-dessert-480.webp 480w, assets/food-made-dessert-720.webp 720w, assets/food-made-dessert-960.webp 960w" sizes="(max-width: 700px) min(420px, 100vw), 360px" width="1365" height="768" alt="Homemade dessert with candied orange" loading="lazy" decoding="async" style="height:auto;width:23.6%;margin-right:2.2%;flex-shrink:0;aspect-ratio:1365/768;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
+      <img class="coll-img" src="assets/food-made-mezze-platter-960.webp" srcset="assets/food-made-mezze-platter-480.webp 480w, assets/food-made-mezze-platter-720.webp 720w, assets/food-made-mezze-platter-960.webp 960w" sizes="(max-width: 700px) min(420px, 100vw), 360px" width="1524" height="704" alt="Mezze platter with baklava, candied orange, olive and fig" loading="lazy" decoding="async" style="height:auto;width:25.4%;flex-shrink:0;aspect-ratio:1524/704;object-fit:contain;display:block;border:1px solid rgba(29,29,26,0.12);">
     </div>
   </div>
 </main>
